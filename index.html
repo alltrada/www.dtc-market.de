@@ -107,10 +107,11 @@
     <div class="max-w-6xl w-full">
      <h2 id="about-heading" class="text-3xl md:text-4xl font-medium text-white mb-10 tracking-tight drop-shadow-md">About Us</h2>
      <div class="max-w-4xl space-y-6">
-      <p id="about-p1" class="text-white text-lg leading-relaxed">DTC Market is the trading brand of Drechsler Trading &amp; Commerce, a Germany-based trade and distribution company specializing in branded consumer goods. Our business model covers the entire value chain from B2B procurement through to end-customer distribution.</p>
-      <p id="about-p2" class="text-white text-lg leading-relaxed">We source products from authorized wholesalers and distributors, managing the complete distribution process across multiple sales channels. Our operations span German and European markets, maintaining full compliance with regulatory requirements and commercial standards.</p>
-      <p id="about-p3" class="text-white text-lg leading-relaxed">Our supplier network is built on long-term partnerships with reliable wholesalers who provide genuine products, proper documentation, and transparent business practices. We prioritize professional procurement processes and clear contractual relationships.</p>
-      <p id="about-p4" class="text-white text-lg leading-relaxed">As an independent trading company, we focus on structured operations, compliance with all applicable regulations, and professional standards across our entire distribution chain. Our approach emphasizes reliability, transparency, and mutually beneficial business relationships.</p>
+      <p id="about-p1" class="text-white text-lg leading-relaxed">DTC Market is the trading brand of Drechsler Trading &amp; Commerce, a Germany-based trade and distribution company focused on branded consumer goods.</p>
+      <p id="about-p2" class="text-white text-lg leading-relaxed">Our business activities cover the full commercial value chain, from professional B2B procurement to distribution across established sales channels within Germany and Europe.</p>
+      <p id="about-p3" class="text-white text-lg leading-relaxed">We source products exclusively from authorized wholesalers and distributors. All goods are genuine, properly documented, and handled in accordance with applicable regulatory and commercial requirements.</p>
+      <p id="about-p4" class="text-white text-lg leading-relaxed">Our supplier network is built on long-term, professional relationships with reliable partners. We operate with clear contractual structures, transparent processes, and a strong focus on compliance and operational integrity.</p>
+      <p id="about-p5" class="text-white text-lg leading-relaxed">As an independent trading company, we maintain structured internal processes and adhere to professional standards throughout our entire distribution chain, ensuring reliability and consistency in all business activities.</p>
      </div>
     </div>
    </section><!-- Business Focus Section -->
@@ -138,8 +139,8 @@
        <svg class="w-6 h-6 text-white mt-1 flex-shrink-0" viewbox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
        </svg>
        <div>
-        <h3 id="focus-3-title" class="text-white text-xl font-medium mb-2">End-Customer Sales</h3>
-        <p id="focus-3-desc" class="text-white">Market-oriented distribution chain extending to end-customer level across multiple touchpoints</p>
+        <h3 id="focus-3-title" class="text-white text-xl font-medium mb-2">Downstream Distribution</h3>
+        <p id="focus-3-desc" class="text-white">Structured distribution processes reaching downstream market levels, including end-customer environments</p>
        </div>
       </div>
       <div class="flex items-start gap-5 p-7 bg-black/60 border border-gray-600 backdrop-blur-sm rounded-lg">
@@ -545,19 +546,20 @@
     const defaultConfig = {
       company_name: 'DTC Market',
       tagline: 'Trade & Distribution of Consumer Goods',
-      subtitle: 'From wholesale sourcing to structured distribution across multiple sales channels',
+      subtitle: 'From wholesale sourcing to structured distribution across multiple channels',
       about_title: 'About Us',
-      about_paragraph_1: 'DTC Market is the trading brand of Drechsler Trading & Commerce, a Germany-based trade and distribution company specializing in branded consumer goods. Our business model covers the entire value chain from B2B procurement through to end-customer distribution.',
-      about_paragraph_2: 'We source products from authorized wholesalers and distributors, managing the complete distribution process across multiple sales channels. Our operations span German and European markets, maintaining full compliance with regulatory requirements and commercial standards.',
-      about_paragraph_3: 'Our supplier network is built on long-term partnerships with reliable wholesalers who provide genuine products, proper documentation, and transparent business practices. We prioritize professional procurement processes and clear contractual relationships.',
-      about_paragraph_4: 'As an independent trading company, we focus on structured operations, compliance with all applicable regulations, and professional standards across our entire distribution chain. Our approach emphasizes reliability, transparency, and mutually beneficial business relationships.',
-      focus_title: 'Business Model',
+      about_paragraph_1: 'DTC Market is the trading brand of Drechsler Trading & Commerce, a Germany-based trade and distribution company focused on branded consumer goods.',
+      about_paragraph_2: 'Our business activities cover the full commercial value chain, from professional B2B procurement to distribution across established sales channels within Germany and Europe.',
+      about_paragraph_3: 'We source products exclusively from authorized wholesalers and distributors. All goods are genuine, properly documented, and handled in accordance with applicable regulatory and commercial requirements.',
+      about_paragraph_4: 'Our supplier network is built on long-term, professional relationships with reliable partners. We operate with clear contractual structures, transparent processes, and a strong focus on compliance and operational integrity.',
+      about_paragraph_5: 'As an independent trading company, we maintain structured internal processes and adhere to professional standards throughout our entire distribution chain, ensuring reliability and consistency in all business activities.',
+      focus_title: 'Business Operations Framework',
       focus_item_1_title: 'Wholesale Sourcing',
       focus_item_1_desc: 'Systematic procurement of branded consumer goods from authorized distributors and wholesale partners',
       focus_item_2_title: 'Multi-Channel Distribution',
       focus_item_2_desc: 'Professional distribution infrastructure across various sales channels and market segments',
-      focus_item_3_title: 'End-Customer Sales',
-      focus_item_3_desc: 'Market-oriented distribution chain extending to end-customer level across multiple touchpoints',
+      focus_item_3_title: 'Downstream Distribution',
+      focus_item_3_desc: 'Structured distribution processes reaching downstream market levels, including end-customer environments',
       focus_item_4_title: 'Compliance & Quality Standards',
       focus_item_4_desc: 'Full regulatory compliance and adherence to commercial quality standards throughout the supply chain',
       contact_title: 'Contact',
@@ -637,6 +639,7 @@
       document.getElementById('about-p2').textContent = config.about_paragraph_2 || defaultConfig.about_paragraph_2;
       document.getElementById('about-p3').textContent = config.about_paragraph_3 || defaultConfig.about_paragraph_3;
       document.getElementById('about-p4').textContent = config.about_paragraph_4 || defaultConfig.about_paragraph_4;
+      document.getElementById('about-p5').textContent = config.about_paragraph_5 || defaultConfig.about_paragraph_5;
       
       // Update focus section
       document.getElementById('focus-heading').textContent = config.focus_title || defaultConfig.focus_title;
@@ -770,6 +773,7 @@
         ['about_paragraph_2', cfg.about_paragraph_2 || defaultConfig.about_paragraph_2],
         ['about_paragraph_3', cfg.about_paragraph_3 || defaultConfig.about_paragraph_3],
         ['about_paragraph_4', cfg.about_paragraph_4 || defaultConfig.about_paragraph_4],
+        ['about_paragraph_5', cfg.about_paragraph_5 || defaultConfig.about_paragraph_5],
         ['focus_title', cfg.focus_title || defaultConfig.focus_title],
         ['focus_item_1_title', cfg.focus_item_1_title || defaultConfig.focus_item_1_title],
         ['focus_item_1_desc', cfg.focus_item_1_desc || defaultConfig.focus_item_1_desc],
@@ -811,5 +815,5 @@
       onConfigChange(defaultConfig);
     }
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c74e44f058d9e00',t:'MTc2OTk4NTAxMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c75934a114a9e00',t:'MTc2OTk5MjE3OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
