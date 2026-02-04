@@ -101,13 +101,14 @@
     <div class="max-w-3xl">
      <h1 id="hero-company" class="text-5xl md:text-7xl font-semibold text-white mb-6 tracking-tight drop-shadow-lg">DTC Market</h1>
      <p id="hero-tagline" class="text-2xl md:text-3xl text-white font-light mb-4 drop-shadow-md">Trade &amp; Distribution of Consumer Goods</p>
+     <p id="hero-subtitle" class="text-lg md:text-xl text-white font-light mb-4 drop-shadow-md">Across the Full Commercial Value Chain</p>
      <div class="mt-12 space-y-4 max-w-2xl">
       <div class="border-t border-gray-500 pt-8">
        <h3 class="text-white text-xl font-medium mb-4">What We Do</h3>
        <ul class="space-y-3 text-white text-base leading-relaxed">
         <li class="flex items-center gap-3"><span class="text-gray-400">•</span> <span>Wholesale sourcing and commercial trading of consumer goods</span></li>
         <li class="flex items-center gap-3"><span class="text-gray-400">•</span> <span>Multi-channel distribution through established B2B networks</span></li>
-        <li class="flex items-center gap-3"><span class="text-gray-400">•</span> <span>Commercial resale of goods to end-consumer markets</span></li>
+        <li class="flex items-center gap-3"><span class="text-gray-400">•</span> <span>Commercial resale across downstream market levels</span></li>
        </ul>
       </div>
      </div>
@@ -446,7 +447,7 @@
        <li>• name</li>
        <li>• email address</li>
        <li>• phone number</li>
-       <li>• company name and business contact details</li>
+       <li>�� company name and business contact details</li>
        <li>• any information voluntarily provided in the inquiry</li>
       </ul>
      </div><!-- 5. Recipients of Data -->
@@ -683,6 +684,7 @@
     const defaultConfig = {
       company_name: 'DTC Market',
       tagline: 'Trade & Distribution of Consumer Goods',
+      subtitle: 'Across the Full Commercial Value Chain',
       about_title: 'About Us',
       about_paragraph_1: 'DTC Market is the trading brand of Drechsler Trading & Commerce, a Germany-based trade and distribution company focused on branded consumer goods.',
       about_paragraph_2: 'Our business activities cover the full commercial value chain, from professional B2B procurement to distribution across established sales channels within Germany and Europe.',
@@ -718,7 +720,7 @@
       legal_tax_number: 'Tax Number: 203/214/06980',
       legal_vat_id: 'VAT ID: DE408922138',
       footer_copyright: '© 2026 DTC Market. All rights reserved.',
-      footer_note: 'Independent trade & distribution company, Germany',
+      footer_note: 'Independent Trade & Distribution Company · Germany',
       background_color: '#141414',
       surface_color: '#1a1a1a',
       text_color: '#9ca3af',
@@ -770,6 +772,7 @@
       document.getElementById('nav-company').textContent = config.company_name || defaultConfig.company_name;
       document.getElementById('hero-company').textContent = config.company_name || defaultConfig.company_name;
       document.getElementById('hero-tagline').textContent = config.tagline || defaultConfig.tagline;
+      document.getElementById('hero-subtitle').textContent = config.subtitle || defaultConfig.subtitle;
       
       // Update about section
       document.getElementById('about-heading').textContent = config.about_title || defaultConfig.about_title;
@@ -922,6 +925,7 @@
       return new Map([
         ['company_name', cfg.company_name || defaultConfig.company_name],
         ['tagline', cfg.tagline || defaultConfig.tagline],
+        ['subtitle', cfg.subtitle || defaultConfig.subtitle],
         ['about_title', cfg.about_title || defaultConfig.about_title],
         ['about_paragraph_1', cfg.about_paragraph_1 || defaultConfig.about_paragraph_1],
         ['about_paragraph_2', cfg.about_paragraph_2 || defaultConfig.about_paragraph_2],
@@ -977,5 +981,5 @@
       onConfigChange(defaultConfig);
     }
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c8ad8adc1ef452e',t:'MTc3MDIxNTIyMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9c8b5ed2d4ee452e',t:'MTc3MDIyMDcxNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
