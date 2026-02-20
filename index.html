@@ -83,7 +83,6 @@
 
       display: block;
 
-      /* stabile Breite in Canva/Embed: Scroll immer am selben Container */
       overflow-y: scroll;
       scrollbar-gutter: stable;
 
@@ -99,8 +98,6 @@
       box-sizing: border-box;
     }
 
-    /* Nav container: EXAKT IDENTISCH mit section .main-container */
-    /* Nav container: EXAKT IDENTISCH mit section .main-container */
     nav .main-container {
       width: 100%;
       max-width: 1200px;
@@ -110,7 +107,6 @@
       box-sizing: border-box;
     }
 
-    /* Footer container: EXAKT IDENTISCH mit section .main-container */
     footer .main-container {
       width: 100%;
       max-width: 1200px;
@@ -177,7 +173,6 @@
       flex-shrink: 0;
     }
 
-    /* Card styling refinement */
     .card-base {
       background-color: #FAFAF8;
       border: 1px solid #E0DDD5;
@@ -213,29 +208,41 @@
   <div class="w-full h-full relative">
    <nav class="w-full fixed top-0 z-50 bg-white" style="border-bottom:1px solid #EAEAEA; height: var(--nav-h); padding-left: clamp(16px, 3vw, 32px); padding-right: calc(clamp(16px, 3vw, 32px) + 17px); box-sizing: border-box;">
     <div style="height:100%; max-width:1200px; margin: 0 auto;">
-     <div style="height:100%; display:flex; align-items:center; gap:24px;"><!-- Logo --> <span id="nav-company" class="text-base font-semibold text-gray-900 tracking-tight nav-link cursor-pointer" data-section="hero" style="color:#1F1F1F; letter-spacing:-0.3px; white-space:nowrap;">alltrada</span> <!-- Spacer -->
-      <div style="flex:1 1 auto;"></div><!-- Navigation -->
-      <div style="display:flex; align-items:center; justify-content:flex-end; gap:24px; font-size:14px; color:#2B2B2B; white-space:nowrap; line-height:1;"><span class="nav-link hover:text-gray-800 transition-colors font-medium" data-section="about" style="color:#2B2B2B; display:flex; align-items:center;">About</span> <span class="nav-link hover:text-gray-800 transition-colors font-medium" data-section="focus" style="color:#2B2B2B; display:flex; align-items:center;">Business</span> <span class="nav-link hover:text-gray-800 transition-colors font-medium" data-section="procurement" style="color:#2B2B2B; display:flex; align-items:center;">Procurement</span> <span class="nav-link hover:text-gray-800 transition-colors font-medium" data-section="supplier" style="color:#2B2B2B; display:flex; align-items:center;">Supplier Info</span> <span class="nav-link hover:text-gray-800 transition-colors font-medium" data-section="contact" style="color:#2B2B2B; display:flex; align-items:center;">Contact</span>
+     <div style="height:100%; display:flex; align-items:center; gap:24px;">
+      <!-- Logo --> <span id="nav-company" class="text-base font-semibold text-gray-900 tracking-tight nav-link cursor-pointer" data-section="hero" style="color:#1F1F1F; letter-spacing:-0.3px; white-space:nowrap;">alltrada</span>
+      <div style="flex:1 1 auto;"></div><!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-800">
+       <span class="nav-link cursor-pointer hover:text-gray-600 transition-colors" data-section="about">About</span> <span class="nav-link cursor-pointer hover:text-gray-600 transition-colors" data-section="focus">Business</span> <span class="nav-link cursor-pointer hover:text-gray-600 transition-colors" data-section="procurement">Procurement</span> <span class="nav-link cursor-pointer hover:text-gray-600 transition-colors" data-section="supplier">Supplier Info</span> <span class="nav-link cursor-pointer hover:text-gray-600 transition-colors" data-section="contact">Contact</span>
        <div class="relative group">
-        <div class="hover:text-gray-800 transition-colors flex items-center gap-1 cursor-default pointer-events-auto font-medium" style="color:#2B2B2B; display:flex; align-items:center; line-height:1;">
-         Legal 
-         <svg class="w-3 h-3 group-hover:rotate-180 transition-transform" style="color:#2B2B2B; display:block; margin:0; flex-shrink:0;" viewbox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-         </svg>
+        <div class="flex items-center gap-1 cursor-default">
+         Legal
         </div>
-        <div class="absolute left-0 mt-0 w-32 bg-white border border-gray-300 rounded opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50"><span class="block px-4 py-2 hover:bg-gray-100 text-gray-700 transition-colors cursor-pointer nav-link font-medium" data-section="legal" style="color:#2B2B2B;">Imprint</span> <span class="block px-4 py-2 hover:bg-gray-100 text-gray-700 transition-colors cursor-pointer nav-link font-medium" data-section="privacy" style="color:#2B2B2B;">Privacy</span> <span class="block px-4 py-2 hover:bg-gray-100 text-gray-700 transition-colors cursor-pointer nav-link font-medium" data-section="terms" style="color:#2B2B2B;">Terms</span>
+        <div class="absolute left-0 mt-2 w-32 bg-white border border-gray-200 rounded opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+         <span class="block px-4 py-2 hover:bg-gray-100 cursor-pointer nav-link transition-colors" data-section="legal">Imprint</span> <span class="block px-4 py-2 hover:bg-gray-100 cursor-pointer nav-link transition-colors" data-section="privacy">Privacy</span> <span class="block px-4 py-2 hover:bg-gray-100 cursor-pointer nav-link transition-colors" data-section="terms">Terms</span>
         </div>
        </div>
+      </div><!-- Mobile Hamburger --> <button id="mobile-menu-btn" class="md:hidden flex items-center justify-center w-8 h-8">
+       <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+       </svg></button>
+     </div>
+    </div><!-- Mobile Menu Panel -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+     <div class="flex flex-col p-6 space-y-4 text-base font-medium text-gray-800">
+      <span class="nav-link cursor-pointer" data-section="about">About</span> <span class="nav-link cursor-pointer" data-section="focus">Business</span> <span class="nav-link cursor-pointer" data-section="procurement">Procurement</span> <span class="nav-link cursor-pointer" data-section="supplier">Supplier Info</span> <span class="nav-link cursor-pointer" data-section="contact">Contact</span>
+      <div class="border-t pt-4 space-y-2">
+       <span class="nav-link cursor-pointer block" data-section="legal">Imprint</span> <span class="nav-link cursor-pointer block" data-section="privacy">Privacy</span> <span class="nav-link cursor-pointer block" data-section="terms">Terms</span>
       </div>
      </div>
     </div>
    </nav>
-  </div><!-- Hero Section -->
+  </div>
   <section id="hero-section" class="section-view active">
-   <div class="main-container content-width">
+   <div class="main-container content-width text-center md:text-left">
     <h1 id="hero-company" class="text-6xl md:text-8xl font-semibold text-gray-900 mb-4 tracking-tight" style="font-weight: 620;">alltrada</h1>
-    <p id="hero-tagline" class="text-2xl md:text-3xl text-gray-800 font-light mb-3">Trade &amp; Distribution of Consumer Goods</p>
-    <p id="hero-subtitle" class="text-lg md:text-xl text-gray-700 font-light mb-8 muted-text" style="color: #6B645A;">Across the Full Commercial Value Chain</p>
-    <div class="mt-12 space-y-6 max-w-2xl">
+    <p id="hero-tagline" class="text-2xl md:text-3xl text-gray-800 font-light mb-3">Commercial Trade &amp; Distribution of Consumer Goods</p>
+    <p id="hero-subtitle" class="text-lg md:text-xl text-gray-700 font-light mb-8 muted-text" style="color: #6B645A;">Structured Procurement. Professional Distribution. Long-Term Partnerships.</p>
+    <div class="mt-12 space-y-6 max-w-4xl mx-auto md:mx-0">
      <div class="border-t border-gray-300 pt-8">
       <h3 class="text-gray-900 text-lg font-medium mb-4">What We Do</h3>
       <ul class="space-y-3 text-gray-800 text-lg leading-relaxed">
@@ -246,9 +253,9 @@
      </div>
     </div>
    </div>
-  </section><!-- About Us Section -->
+  </section>
   <section id="about-section" class="section-view">
-   <div class="main-container content-width">
+   <div class="main-container content-width text-center md:text-left">
     <h2 id="about-heading" class="text-3xl md:text-4xl font-medium text-gray-900 mb-4 tracking-tight">About Us</h2><span class="section-heading-accent"></span>
     <div class="max-w-4xl space-y-8">
      <p id="about-p1" class="text-gray-800 text-lg leading-relaxed">Alltrada is the trading brand of Drechsler Trading &amp; Commerce, a Germany-based trade and distribution company focused on branded consumer goods.</p>
@@ -258,95 +265,90 @@
      <p id="about-p5" class="text-gray-800 text-lg leading-relaxed">As an independent trading company, we maintain structured internal processes and adhere to professional standards throughout our entire distribution chain, ensuring reliability and consistency in all business activities.</p>
     </div>
    </div>
-  </section><!-- Business Focus Section -->
+  </section>
   <section id="focus-section" class="section-view">
-   <div class="main-container content-width">
+   <div class="main-container content-width text-center md:text-left">
     <h2 id="focus-heading" class="text-3xl md:text-4xl font-medium text-gray-900 mb-4 tracking-tight">Business Model</h2><span class="section-heading-accent"></span>
-    <div class="grid md:grid-cols-2 gap-8 mt-8">
-     <div class="p-7 card-base card-content-spacing">
+    <div class="grid md:grid-cols-2 gap-8 mt-8 justify-center">
+     <div class="p-7 card-base card-content-spacing text-center md:text-left">
       <h3 id="focus-1-title" class="text-gray-900 text-base font-semibold">Wholesale Sourcing</h3>
       <p id="focus-1-desc" class="text-gray-700 text-base font-normal leading-relaxed">Systematic procurement of branded consumer goods from authorized distributors and wholesale partners</p>
      </div>
-     <div class="p-7 card-base card-content-spacing">
-      <h3 id="focus-2-title" class="text-gray-900 text-base font-semibold">Multi-Channel Distribution</h3>
-      <p id="focus-2-desc" class="text-gray-700 text-base font-normal leading-relaxed">Professional distribution infrastructure across various sales channels and market segments</p>
+     <div class="p-7 card-base card-content-spacing text-center md:text-left">
+      <h3 id="focus-2-title" class="text-gray-900 text-base font-semibold">B2B Distribution</h3>
+      <p id="focus-2-desc" class="text-gray-700 text-base font-normal leading-relaxed">Coordinated distribution through established trade networks and long-term partnerships</p>
      </div>
-     <div class="p-7 card-base card-content-spacing">
+     <div class="p-7 card-base card-content-spacing text-center md:text-left">
       <h3 id="focus-3-title" class="text-gray-900 text-base font-semibold">Downstream Distribution</h3>
-      <p id="focus-3-desc" class="text-gray-700 text-base font-normal leading-relaxed">Structured distribution processes reaching downstream market levels, including end-customer environments</p>
+      <p id="focus-3-desc" class="text-gray-700 text-base font-normal leading-relaxed">Structured distribution covering downstream market levels, including end-customer environments</p>
      </div>
-     <div class="p-7 card-base card-content-spacing">
+     <div class="p-7 card-base card-content-spacing text-center md:text-left">
       <h3 id="focus-4-title" class="text-gray-900 text-base font-semibold">Compliance &amp; Quality Standards</h3>
       <p id="focus-4-desc" class="text-gray-700 text-base font-normal leading-relaxed">Full regulatory compliance and adherence to commercial quality standards throughout the supply chain</p>
      </div>
     </div>
    </div>
-  </section><!-- Procurement Section -->
+  </section>
   <section id="procurement-section" class="section-view">
-   <div class="main-container content-width">
+   <div class="main-container content-width text-center md:text-left">
     <h2 class="text-3xl md:text-4xl font-medium text-gray-900 mb-4 tracking-tight">Procurement</h2><span class="section-heading-accent"></span>
-    <p class="text-gray-800 text-lg leading-relaxed mb-16 max-w-3xl">Alltrada's sourcing activities follow a structured procurement framework defined by specific product categories, clearly established exclusion criteria, and standardized operational conditions.</p><!-- Product Focus Areas -->
+    <p class="text-gray-800 text-lg leading-relaxed mb-16 max-w-3xl">Alltrada's sourcing activities follow a structured procurement framework defined by specific product categories, clearly established exclusion criteria, and standardized operational conditions.</p>
     <div class="mb-16">
      <h3 class="text-2xl font-medium text-gray-900 mb-8">Product Focus Areas</h3>
      <p class="text-gray-800 text-lg mb-6">We source branded consumer goods in the following categories:</p>
-     <div class="grid md:grid-cols-2 gap-6 mb-6">
-      <div class="p-6 card-base card-content-spacing">
+     <div class="grid md:grid-cols-2 gap-6 mb-6 justify-center">
+      <div class="p-6 card-base card-content-spacing text-center md:text-left">
        <p class="text-gray-900 font-semibold text-base">Consumer Electronics</p>
        <p class="text-gray-600 text-base mt-1 font-normal">Small electronics, household devices, accessories</p>
       </div>
-      <div class="p-6 card-base card-content-spacing">
+      <div class="p-6 card-base card-content-spacing text-center md:text-left">
        <p class="text-gray-900 font-medium text-base">Household &amp; Home</p>
        <p class="text-gray-600 muted-text text-base mt-1">Cleaning products, home essentials, daily use items</p>
       </div>
-      <div class="p-6 card-base card-content-spacing">
+      <div class="p-6 card-base card-content-spacing text-center md:text-left">
        <p class="text-gray-900 font-medium text-base">Office Supplies</p>
        <p class="text-gray-600 muted-text text-base mt-1">Stationery, paper goods, office materials</p>
       </div>
-      <div class="p-6 card-base card-content-spacing">
+      <div class="p-6 card-base card-content-spacing text-center md:text-left">
        <p class="text-gray-900 font-medium text-base">Personal Care &amp; Beauty</p>
        <p class="text-gray-600 muted-text text-base mt-1">Hygiene, body care, cosmetic products</p>
       </div>
-      <div class="p-6 card-base card-content-spacing">
+      <div class="p-6 card-base card-content-spacing text-center md:text-left">
        <p class="text-gray-900 font-medium text-base">Pet Care</p>
        <p class="text-gray-600 muted-text text-base mt-1">Pet food, accessories, care products</p>
       </div>
-      <div class="p-6 card-base card-content-spacing">
+      <div class="p-6 card-base card-content-spacing text-center md:text-left">
        <p class="text-gray-900 font-medium text-base">Automotive, Tools &amp; Accessories</p>
        <p class="text-gray-600 muted-text text-base mt-1">Car accessories, tools, DIY equipment</p>
       </div>
      </div>
      <p class="text-gray-600 italic text-sm">All products must be new, branded, and from authorized sources.</p>
-    </div><!-- Exclusion Criteria -->
+    </div>
     <div class="mb-16">
      <h3 class="text-2xl font-medium text-gray-900 mb-6">Exclusion Criteria</h3>
      <p class="text-gray-800 text-lg mb-6">To maintain quality and compliance standards, we do <strong>not</strong> purchase:</p>
      <div class="space-y-3">
-      <div class="flex items-center gap-3 text-gray-700 text-base">
-       <span style="color: #2B2B2B; font-size: 16px; font-weight: 400; line-height: 1.7;">×</span>
+      <div class="flex items-center gap-3 text-gray-700 text-base"><span style="color: #2B2B2B; font-size: 16px; font-weight: 400; line-height: 1.7;">×</span>
        <p>Used, refurbished, or returned goods</p>
       </div>
-      <div class="flex items-center gap-3 text-gray-700 text-base">
-       <span style="color: #2B2B2B; font-size: 16px; font-weight: 400; line-height: 1.7;">×</span>
+      <div class="flex items-center gap-3 text-gray-700 text-base"><span style="color: #2B2B2B; font-size: 16px; font-weight: 400; line-height: 1.7;">×</span>
        <p>Products from unverified or grey market sources</p>
       </div>
-      <div class="flex items-center gap-3 text-gray-700 text-base">
-       <span style="color: #2B2B2B; font-size: 16px; font-weight: 400; line-height: 1.7;">×</span>
+      <div class="flex items-center gap-3 text-gray-700 text-base"><span style="color: #2B2B2B; font-size: 16px; font-weight: 400; line-height: 1.7;">×</span>
        <p>Counterfeit or unauthorized parallel imports</p>
       </div>
-      <div class="flex items-center gap-3 text-gray-700 text-base">
-       <span style="color: #2B2B2B; font-size: 16px; font-weight: 400; line-height: 1.7;">×</span>
+      <div class="flex items-center gap-3 text-gray-700 text-base"><span style="color: #2B2B2B; font-size: 16px; font-weight: 400; line-height: 1.7;">×</span>
        <p>Damaged packaging or expired products</p>
       </div>
-      <div class="flex items-center gap-3 text-gray-700 text-base">
-       <span style="color: #2B2B2B; font-size: 16px; font-weight: 400; line-height: 1.7;">×</span>
+      <div class="flex items-center gap-3 text-gray-700 text-base"><span style="color: #2B2B2B; font-size: 16px; font-weight: 400; line-height: 1.7;">×</span>
        <p>Unbranded or white-label items without proper documentation</p>
       </div>
      </div>
-    </div><!-- Procurement Profile -->
+    </div>
     <div class="mb-12">
      <h3 class="text-2xl font-medium text-gray-900 mb-6">Procurement Profile</h3>
-     <div class="grid md:grid-cols-3 gap-6">
-      <div class="p-6 card-base card-content-spacing">
+     <div class="grid md:grid-cols-3 gap-6 justify-center">
+      <div class="p-6 card-base card-content-spacing text-center md:text-left">
        <h4 class="text-gray-900 font-medium text-base mb-4">Order Volume</h4>
        <ul class="space-y-2 text-gray-700 text-base">
         <li>• Starting with case packs and pallet orders</li>
@@ -354,15 +356,14 @@
         <li>• Regular reorders for successful products</li>
        </ul>
       </div>
-      <div class="p-6 card-base card-content-spacing">
+      <div class="p-6 card-base card-content-spacing text-center md:text-left">
        <h4 class="text-gray-900 font-medium text-base mb-4">Geographic Focus</h4>
        <ul class="space-y-2 text-gray-700 text-base">
         <li>• Primary: European Union (EU)</li>
         <li>• Secondary: Selected international markets</li>
-        <li>• Authorized distribution channels only</li>
        </ul>
       </div>
-      <div class="p-6 card-base card-content-spacing">
+      <div class="p-6 card-base card-content-spacing text-center md:text-left">
        <h4 class="text-gray-900 font-medium text-base mb-4">Payment Framework</h4>
        <ul class="space-y-2 text-gray-700 text-base">
         <li>• Initial payment conditions depending on supplier requirements</li>
@@ -372,36 +373,36 @@
      </div>
     </div>
    </div>
-  </section><!-- Supplier Information Section -->
+  </section>
   <section id="supplier-section" class="section-view">
-   <div class="main-container content-width">
+   <div class="main-container content-width text-center md:text-left">
     <h2 id="supplier-heading" class="text-3xl md:text-4xl font-medium text-gray-900 mb-4 tracking-tight">Supplier Information</h2><span class="section-heading-accent"></span>
-    <p id="supplier-intro" class="text-gray-800 text-lg leading-relaxed mb-16 max-w-4xl">Supplier onboarding at Alltrada is governed by a verification framework comprising eligibility standards, documentation obligations, and product authorization criteria.</p><!-- Onboarding Process -->
+    <p id="supplier-intro" class="text-gray-800 text-lg leading-relaxed mb-16 max-w-4xl">Supplier onboarding at Alltrada is governed by a verification framework comprising eligibility standards, documentation obligations, and product authorization criteria.</p>
     <div class="mb-12">
      <h3 class="text-2xl font-medium text-gray-900 mb-8">Onboarding Process</h3>
-     <div class="grid md:grid-cols-4 gap-6 relative">
-      <div class="p-6 card-base card-content-spacing text-center">
+     <div class="grid md:grid-cols-4 gap-6 relative justify-center">
+      <div class="p-6 card-base card-content-spacing text-center md:text-center">
        <div class="numeric-badge mx-auto mb-4">
         1
        </div>
        <h4 class="text-gray-900 font-semibold text-base mb-2">Initial Submission</h4>
        <p class="text-gray-700 text-base font-normal leading-relaxed">Submit product catalogue and company details.</p>
       </div>
-      <div class="p-6 card-base card-content-spacing text-center">
+      <div class="p-6 card-base card-content-spacing text-center md:text-center">
        <div class="numeric-badge mx-auto mb-4">
         2
        </div>
        <h4 class="text-gray-900 font-semibold text-base mb-2">Verification</h4>
        <p class="text-gray-700 text-base font-normal leading-relaxed">Verification of business registration and VAT status.</p>
       </div>
-      <div class="p-6 card-base card-content-spacing text-center">
+      <div class="p-6 card-base card-content-spacing text-center md:text-center">
        <div class="numeric-badge mx-auto mb-4">
         3
        </div>
        <h4 class="text-gray-900 font-semibold text-base mb-2">Evaluation</h4>
        <p class="text-gray-700 text-base font-normal leading-relaxed">Review of product scope, authorization status, and commercial terms.</p>
       </div>
-      <div class="p-6 card-base card-content-spacing text-center">
+      <div class="p-6 card-base card-content-spacing text-center md:text-center">
        <div class="numeric-badge mx-auto mb-4">
         4
        </div>
@@ -410,21 +411,23 @@
       </div>
      </div>
      <p class="text-gray-600 text-center mt-8 italic text-sm">Indicative processing time: 5–7 business days.</p>
-    </div><!-- Supplier Inquiries section -->
+    </div>
     <div class="p-8 card-base border-0 mb-12" style="background-color: #FAFAF8; border: 1px solid #E0DDD5 !important;">
      <h3 class="text-2xl font-medium text-gray-900 mb-6">Supplier Inquiries</h3>
-     <div class="grid md:grid-cols-2 gap-6 mb-8">
-      <div class="flex items-center gap-3">
-       <svg class="w-6 h-6 text-gray-700" viewbox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" /> <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+     <div class="grid md:grid-cols-2 gap-6 mb-8 justify-center">
+      <div class="flex flex-col md:flex-row md:items-center md:gap-3 items-center gap-3">
+       <svg class="w-6 h-6 text-gray-700" viewbox="0 0 20 20" fill="currentColor">
+        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" /> <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
        </svg>
-       <div>
+       <div class="text-center md:text-left">
         <p class="text-gray-600 text-base">Email</p><a id="supplier-cta-email" href="mailto:purchasing@alltrada.com" class="text-gray-900 text-lg hover:text-gray-700">purchasing@alltrada.com</a>
        </div>
       </div>
-      <div class="flex items-center gap-3">
-       <svg class="w-6 h-6 text-gray-700" viewbox="0 0 20 20" fill="currentColor"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+      <div class="flex flex-col md:flex-row md:items-center md:gap-3 items-center gap-3">
+       <svg class="w-6 h-6 text-gray-700" viewbox="0 0 20 20" fill="currentColor">
+        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
        </svg>
-       <div>
+       <div class="text-center md:text-left">
         <p class="text-gray-600 text-sm">Phone</p><a id="supplier-cta-phone" href="tel:+491741518634" class="text-gray-900 text-base hover:text-gray-700">+49 174 1518634</a>
         <p class="text-gray-600 text-xs mt-1">Mon–Sat, 09:00–17:00 (CET)</p>
        </div>
@@ -440,29 +443,29 @@
       </ul>
       <p class="text-gray-700 text-xs mt-4"><strong>Subject line:</strong> "Supplier Inquiry - [Your Company Name]"</p>
      </div>
-    </div><!-- alltrada Verification Documents section -->
+    </div>
     <div class="pt-8 border-t border-gray-300">
      <h3 id="company-docs-heading" class="text-2xl font-medium text-gray-900 mb-6">Alltrada Verification Documents</h3>
      <p class="text-gray-700 text-sm mb-6">For verification and compliance purposes, we provide the following documents upon request:</p>
-     <div class="grid md:grid-cols-2 gap-4">
-      <div class="p-4 card-base" style="background-color: #FAFAF8;">
+     <div class="grid md:grid-cols-2 gap-4 justify-center">
+      <div class="p-4 card-base text-center md:text-left" style="background-color: #FAFAF8;">
        <p class="text-gray-700 text-sm">Business Registration</p>
       </div>
-      <div class="p-4 card-base" style="background-color: #FAFAF8;">
+      <div class="p-4 card-base text-center md:text-left" style="background-color: #FAFAF8;">
        <p class="text-gray-700 text-sm">VAT ID</p>
       </div>
-      <div class="p-4 card-base" style="background-color: #FAFAF8;">
+      <div class="p-4 card-base text-center md:text-left" style="background-color: #FAFAF8;">
        <p class="text-gray-700 text-sm">Company Representative Details</p>
       </div>
-      <div class="p-4 card-base" style="background-color: #FAFAF8;">
+      <div class="p-4 card-base text-center md:text-left" style="background-color: #FAFAF8;">
        <p class="text-gray-700 text-sm">Payment and Banking Information</p>
       </div>
      </div>
     </div>
    </div>
-  </section><!-- Privacy Policy Section -->
+  </section>
   <section id="privacy-section" class="section-view">
-   <div class="main-container content-width">
+   <div class="main-container content-width text-center md:text-left">
     <h2 id="privacy-heading" class="text-3xl md:text-4xl font-medium text-gray-900 mb-8 tracking-tight">Privacy Notice</h2>
     <div class="max-w-4xl space-y-8">
      <div>
@@ -580,9 +583,9 @@
      </div>
     </div>
    </div>
-  </section><!-- Terms of Use Section -->
+  </section>
   <section id="terms-section" class="section-view">
-   <div class="main-container content-width">
+   <div class="main-container content-width text-center md:text-left">
     <h2 id="terms-heading" class="text-3xl md:text-4xl font-medium text-gray-900 mb-8 tracking-tight">Terms of Use</h2>
     <div class="max-w-4xl space-y-10">
      <div>
@@ -620,7 +623,7 @@
       <h3 class="text-lg font-medium text-gray-900 mb-3">4. No Brokerage or Agency Relationship</h3>
       <ul class="text-gray-700 leading-relaxed space-y-2 text-base">
        <li>• Alltrada does not act as a broker, agent, or intermediary on behalf of third parties through this website.</li>
-       <li>��� No representation, agency, partnership, or joint venture is created by the use of this website or by contacting Alltrada.</li>
+       <li>• No representation, agency, partnership, or joint venture is created by the use of this website or by contacting Alltrada.</li>
       </ul>
      </div>
      <div>
@@ -663,39 +666,53 @@
      </div>
     </div>
    </div>
-  </section><!-- Contact Section -->
+  </section>
   <section id="contact-section" class="section-view">
-   <div class="main-container content-width">
+   <div class="main-container content-width text-center md:text-left">
     <h2 id="contact-heading" class="text-3xl md:text-4xl font-medium text-gray-900 mb-4 tracking-tight">Contact</h2><span class="section-heading-accent"></span>
-    <div class="max-w-3xl mt-12">
-     <div class="mb-12">
-      <div class="space-y-2 mb-12">
-       <p id="contact-company" class="text-gray-900 text-base">Drechsler Trading &amp; Commerce</p>
-       <p id="contact-address-street" class="text-gray-900 text-base">St. Petersburger Straße 30</p>
-       <p id="contact-address-city" class="text-gray-900 text-base">01069 Dresden</p>
-       <p id="contact-address-country" class="text-gray-900 text-base">Germany</p>
-      </div>
-     </div>
-     <div class="flex flex-col gap-6 max-w-sm">
-      <div class="flex items-start gap-4 p-6 card-base card-content-spacing">
-       <svg class="w-6 h-6 text-gray-700 mt-1 flex-shrink-0" viewbox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" /> <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-       </svg>
-       <div>
-        <p class="text-gray-600 text-sm font-medium">Email</p><a id="contact-email" href="mailto:contact@alltrada.com" class="text-gray-900 hover:text-gray-700 text-base">contact@alltrada.com</a>
+    <div class="mt-12">
+     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
+      <!-- Address -->
+      <div class="p-6 card-base card-content-spacing text-center md:text-left">
+       <div class="flex flex-col md:flex-row md:items-start md:gap-4 items-center gap-4">
+        <svg class="w-6 h-6 text-gray-700 mt-0 md:mt-1 flex-shrink-0" viewbox="0 0 20 20" fill="currentColor">
+         <path fill-rule="evenodd" d="M5.05 2.636A7 7 0 0116.364 13.95l-5.657 5.657a1 1 0 01-1.414 0L3.636 13.95A7 7 0 015.05 2.636zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+        </svg>
+        <div>
+         <p class="text-gray-600 text-sm font-medium mb-2">Address</p>
+         <p id="contact-company" class="text-gray-900 text-base">Drechsler Trading &amp; Commerce</p>
+         <p id="contact-address-street" class="text-gray-900 text-base">St. Petersburger Straße 30</p>
+         <p id="contact-address-city" class="text-gray-900 text-base">01069 Dresden</p>
+         <p id="contact-address-country" class="text-gray-900 text-base">Germany</p>
+        </div>
        </div>
-      </div>
-      <div class="flex items-start gap-4 p-6 card-base card-content-spacing">
-       <svg class="w-6 h-6 text-gray-700 mt-1 flex-shrink-0" viewbox="0 0 20 20" fill="currentColor"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-       </svg>
-       <div>
-        <p class="text-gray-600 text-sm font-medium">Phone</p><a id="contact-phone" href="tel:+491741518634" class="text-gray-900 hover:text-gray-700 text-base">+49 174 1518634</a>
-        <p class="text-gray-600 text-xs mt-1">Mon–Sat, 09:00–17:00 (CET)</p>
+      </div><!-- Email -->
+      <div class="p-6 card-base card-content-spacing text-center md:text-left">
+       <div class="flex flex-col md:flex-row md:items-start md:gap-4 items-center gap-4">
+        <svg class="w-6 h-6 text-gray-700 mt-0 md:mt-1 flex-shrink-0" viewbox="0 0 20 20" fill="currentColor">
+         <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" /> <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+        </svg>
+        <div class="min-w-0">
+         <p class="text-gray-600 text-sm font-medium">Email</p><a id="contact-email" href="mailto:contact@alltrada.com" class="text-gray-900 hover:text-gray-700 text-base break-words">contact@alltrada.com</a>
+         <p class="text-gray-600 text-xs mt-2">General inquiries</p>
+        </div>
+       </div>
+      </div><!-- Phone -->
+      <div class="p-6 card-base card-content-spacing text-center md:text-left">
+       <div class="flex flex-col md:flex-row md:items-start md:gap-4 items-center gap-4">
+        <svg class="w-6 h-6 text-gray-700 mt-0 md:mt-1 flex-shrink-0" viewbox="0 0 20 20" fill="currentColor">
+         <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+        </svg>
+        <div class="min-w-0">
+         <p class="text-gray-600 text-sm font-medium">Phone</p><a id="contact-phone" href="tel:+491741518634" class="text-gray-900 hover:text-gray-700 text-base">+49 174 1518634</a>
+         <p class="text-gray-600 text-xs mt-1">Mon–Sat, 09:00–17:00 (CET)</p>
+        </div>
        </div>
       </div>
      </div>
     </div>
    </div>
-  </section><!-- Legal Notice Section -->
+  </section>
   <section id="legal-section" class="section-view">
    <div class="main-container content-width">
     <h2 id="legal-heading" class="text-3xl md:text-4xl font-medium text-gray-900 mb-12 tracking-tight">Legal Notice</h2>
@@ -723,7 +740,7 @@
      </div>
     </div>
    </div>
-  </section><!-- Footer -->
+  </section>
   <footer class="w-full fixed bottom-0 z-40 bg-white border-t border-gray-300" style="height: var(--footer-h); padding-left: clamp(16px, 3vw, 32px); padding-right: calc(clamp(16px, 3vw, 32px) + 17px); box-sizing: border-box;">
    <div style="height:100%; width:100%; max-width:1200px; margin: 0 auto; display:flex; align-items:center;">
     <div class="flex justify-between items-center w-full">
@@ -733,7 +750,6 @@
    </div>
   </footer>
   <script>
-    // Navigation functionality
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('.section-view');
 
@@ -741,25 +757,28 @@
       link.addEventListener('click', (e) => {
         const sectionId = e.currentTarget.dataset.section + '-section';
         
-        // Remove active class from all sections and links
-        sections.forEach(section => section.classList.remove('active'));
+        sections.forEach(section => {
+          section.classList.remove('active');
+        });
+
         navLinks.forEach(link => link.classList.remove('active'));
 
-        // Add active class to selected section and link
         const targetSection = document.getElementById(sectionId);
+
         if (targetSection) {
           targetSection.classList.add('active');
           e.currentTarget.classList.add('active');
+
+          // Scroll zurücksetzen
+          targetSection.scrollTop = 0;
         }
       });
     });
 
-    // Initialize first nav link as active
     if (navLinks.length > 0) {
       navLinks[0].classList.add('active');
     }
 
-    // Element SDK initialization
     const defaultConfig = {
       company_name: 'alltrada',
       hero_tagline: 'Trade & Distribution of Consumer Goods',
@@ -774,34 +793,28 @@
     async function onConfigChange(newConfig) {
       config = { ...config, ...newConfig };
       
-      // Update company name
       if (config.company_name) {
         document.getElementById('nav-company').textContent = config.company_name;
       }
 
-      // Update tagline
       if (config.hero_tagline) {
         document.getElementById('hero-tagline').textContent = config.hero_tagline;
       }
 
-      // Update colors
       if (config.primary_color) {
         document.querySelectorAll('.section-heading-accent').forEach(el => {
           el.style.backgroundColor = config.primary_color;
         });
       }
 
-      // Update text color
       if (config.text_color) {
         document.body.style.color = config.text_color;
       }
 
-      // Update background color
       if (config.background_color) {
         document.body.style.backgroundColor = config.background_color;
       }
 
-      // Update font
       if (config.font_family) {
         document.body.style.fontFamily = config.font_family + ', sans-serif';
       }
@@ -851,7 +864,6 @@
       ]);
     }
 
-    // Initialize Element SDK if available
     if (window.elementSdk) {
       window.elementSdk.init({
         defaultConfig,
@@ -863,7 +875,6 @@
       onConfigChange(defaultConfig);
     }
 
-    // Scrollbar width measurement and header/footer alignment
     function getActiveSection() {
       return document.querySelector('.section-view.active');
     }
@@ -878,11 +889,9 @@
       });
     }
 
-    // Initial + nach Fonts/Layout
     window.addEventListener('load', updateHeaderOffsetToSectionScrollbar);
     window.addEventListener('resize', updateHeaderOffsetToSectionScrollbar);
 
-    // Nach jedem Sectionwechsel neu messen
     document.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', () => {
         setTimeout(updateHeaderOffsetToSectionScrollbar, 0);
@@ -890,6 +899,23 @@
         setTimeout(updateHeaderOffsetToSectionScrollbar, 150);
       });
     });
+
+    // Mobile menu toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileBtn) {
+      mobileBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+
+    // Close mobile menu on nav click
+    document.querySelectorAll('#mobile-menu .nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9d074c2af095321c',t:'MTc3MTUyMDE4Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9d0f004690e3e529',t:'MTc3MTYwMDk2My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
