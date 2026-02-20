@@ -93,27 +93,48 @@
       width: 100%;
       max-width: 1200px;
       margin: 0 auto;
-      padding-left: clamp(16px, 3vw, 32px);
-      padding-right: calc(clamp(16px, 3vw, 32px) + 17px);
+      padding-left: 24px;
+      padding-right: 24px;
       box-sizing: border-box;
+    }
+
+    @media (min-width: 768px) {
+      .main-container {
+        padding-left: clamp(16px, 3vw, 32px);
+        padding-right: calc(clamp(16px, 3vw, 32px) + 17px);
+      }
     }
 
     nav .main-container {
       width: 100%;
       max-width: 1200px;
       margin: 0 auto;
-      padding-left: clamp(16px, 3vw, 32px);
-      padding-right: calc(clamp(16px, 3vw, 32px) + 17px);
+      padding-left: 24px;
+      padding-right: 24px;
       box-sizing: border-box;
+    }
+
+    @media (min-width: 768px) {
+      nav .main-container {
+        padding-left: clamp(16px, 3vw, 32px);
+        padding-right: calc(clamp(16px, 3vw, 32px) + 17px);
+      }
     }
 
     footer .main-container {
       width: 100%;
       max-width: 1200px;
       margin: 0 auto;
-      padding-left: clamp(16px, 3vw, 32px);
-      padding-right: calc(clamp(16px, 3vw, 32px) + 17px);
+      padding-left: 24px;
+      padding-right: 24px;
       box-sizing: border-box;
+    }
+
+    @media (min-width: 768px) {
+      footer .main-container {
+        padding-left: clamp(16px, 3vw, 32px);
+        padding-right: calc(clamp(16px, 3vw, 32px) + 17px);
+      }
     }
 
     .content-width {
@@ -156,7 +177,13 @@
       width: 100px;
       height: 3px;
       background-color: #C6A75E;
-      margin: 14px 0 24px 0;
+      margin: 14px auto 24px auto;
+    }
+
+    @media (min-width: 768px) {
+      .section-heading-accent {
+        margin: 14px 0 24px 0;
+      }
     }
 
     .numeric-badge {
@@ -208,30 +235,24 @@
   <div class="w-full h-full relative">
    <nav class="w-full fixed top-0 z-50 bg-white" style="border-bottom:1px solid #EAEAEA; height: var(--nav-h); padding-left: clamp(16px, 3vw, 32px); padding-right: calc(clamp(16px, 3vw, 32px) + 17px); box-sizing: border-box;">
     <div style="height:100%; max-width:1200px; margin: 0 auto;">
-     <div style="height:100%; display:flex; align-items:center; gap:24px;">
-      <!-- Logo --> <span id="nav-company" class="text-base font-semibold text-gray-900 tracking-tight nav-link cursor-pointer" data-section="hero" style="color:#1F1F1F; letter-spacing:-0.3px; white-space:nowrap;">alltrada</span>
+     <div style="height:100%; display:flex; align-items:center; gap:24px;"><!-- Logo --> <span id="nav-company" class="text-base font-semibold text-gray-900 tracking-tight nav-link cursor-pointer" data-section="hero" style="color:#1F1F1F; letter-spacing:-0.3px; white-space:nowrap;">alltrada</span>
       <div style="flex:1 1 auto;"></div><!-- Desktop Navigation -->
-      <div class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-800">
-       <span class="nav-link cursor-pointer hover:text-gray-600 transition-colors" data-section="about">About</span> <span class="nav-link cursor-pointer hover:text-gray-600 transition-colors" data-section="focus">Business</span> <span class="nav-link cursor-pointer hover:text-gray-600 transition-colors" data-section="procurement">Procurement</span> <span class="nav-link cursor-pointer hover:text-gray-600 transition-colors" data-section="supplier">Supplier Info</span> <span class="nav-link cursor-pointer hover:text-gray-600 transition-colors" data-section="contact">Contact</span>
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-800"><span class="nav-link cursor-pointer hover:text-gray-600 transition-colors" data-section="about">About</span> <span class="nav-link cursor-pointer hover:text-gray-600 transition-colors" data-section="focus">Business</span> <span class="nav-link cursor-pointer hover:text-gray-600 transition-colors" data-section="procurement">Procurement</span> <span class="nav-link cursor-pointer hover:text-gray-600 transition-colors" data-section="supplier">Supplier Info</span> <span class="nav-link cursor-pointer hover:text-gray-600 transition-colors" data-section="contact">Contact</span>
        <div class="relative group">
         <div class="flex items-center gap-1 cursor-default">
          Legal
         </div>
-        <div class="absolute left-0 mt-2 w-32 bg-white border border-gray-200 rounded opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-         <span class="block px-4 py-2 hover:bg-gray-100 cursor-pointer nav-link transition-colors" data-section="legal">Imprint</span> <span class="block px-4 py-2 hover:bg-gray-100 cursor-pointer nav-link transition-colors" data-section="privacy">Privacy</span> <span class="block px-4 py-2 hover:bg-gray-100 cursor-pointer nav-link transition-colors" data-section="terms">Terms</span>
+        <div class="absolute left-0 mt-2 w-32 bg-white border border-gray-200 rounded opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50"><span class="block px-4 py-2 hover:bg-gray-100 cursor-pointer nav-link transition-colors" data-section="legal">Imprint</span> <span class="block px-4 py-2 hover:bg-gray-100 cursor-pointer nav-link transition-colors" data-section="privacy">Privacy</span> <span class="block px-4 py-2 hover:bg-gray-100 cursor-pointer nav-link transition-colors" data-section="terms">Terms</span>
         </div>
        </div>
       </div><!-- Mobile Hamburger --> <button id="mobile-menu-btn" class="md:hidden flex items-center justify-center w-8 h-8">
-       <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+       <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
        </svg></button>
      </div>
     </div><!-- Mobile Menu Panel -->
     <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
-     <div class="flex flex-col p-6 space-y-4 text-base font-medium text-gray-800">
-      <span class="nav-link cursor-pointer" data-section="about">About</span> <span class="nav-link cursor-pointer" data-section="focus">Business</span> <span class="nav-link cursor-pointer" data-section="procurement">Procurement</span> <span class="nav-link cursor-pointer" data-section="supplier">Supplier Info</span> <span class="nav-link cursor-pointer" data-section="contact">Contact</span>
-      <div class="border-t pt-4 space-y-2">
-       <span class="nav-link cursor-pointer block" data-section="legal">Imprint</span> <span class="nav-link cursor-pointer block" data-section="privacy">Privacy</span> <span class="nav-link cursor-pointer block" data-section="terms">Terms</span>
+     <div class="flex flex-col p-6 space-y-4 text-base font-medium text-gray-800"><span class="nav-link cursor-pointer" data-section="about">About</span> <span class="nav-link cursor-pointer" data-section="focus">Business</span> <span class="nav-link cursor-pointer" data-section="procurement">Procurement</span> <span class="nav-link cursor-pointer" data-section="supplier">Supplier Info</span> <span class="nav-link cursor-pointer" data-section="contact">Contact</span>
+      <div class="border-t pt-4 space-y-2"><span class="nav-link cursor-pointer block" data-section="legal">Imprint</span> <span class="nav-link cursor-pointer block" data-section="privacy">Privacy</span> <span class="nav-link cursor-pointer block" data-section="terms">Terms</span>
       </div>
      </div>
     </div>
@@ -257,7 +278,7 @@
   <section id="about-section" class="section-view">
    <div class="main-container content-width text-center md:text-left">
     <h2 id="about-heading" class="text-3xl md:text-4xl font-medium text-gray-900 mb-4 tracking-tight">About Us</h2><span class="section-heading-accent"></span>
-    <div class="max-w-4xl space-y-8">
+    <div class="max-w-4xl mx-auto md:mx-0 space-y-8">
      <p id="about-p1" class="text-gray-800 text-lg leading-relaxed">Alltrada is the trading brand of Drechsler Trading &amp; Commerce, a Germany-based trade and distribution company focused on branded consumer goods.</p>
      <p id="about-p2" class="text-gray-800 text-lg leading-relaxed">Our business activities cover the full commercial value chain, from professional B2B procurement to distribution across established sales channels within Germany and Europe.</p>
      <p id="about-p3" class="text-gray-800 text-lg leading-relaxed">We source products exclusively from authorized wholesalers and distributors. All goods are genuine, properly documented, and handled in accordance with applicable regulatory and commercial requirements.</p>
@@ -292,14 +313,14 @@
   <section id="procurement-section" class="section-view">
    <div class="main-container content-width text-center md:text-left">
     <h2 class="text-3xl md:text-4xl font-medium text-gray-900 mb-4 tracking-tight">Procurement</h2><span class="section-heading-accent"></span>
-    <p class="text-gray-800 text-lg leading-relaxed mb-16 max-w-3xl">Alltrada's sourcing activities follow a structured procurement framework defined by specific product categories, clearly established exclusion criteria, and standardized operational conditions.</p>
+    <p class="text-gray-800 text-lg leading-relaxed mb-16 max-w-3xl mx-auto md:mx-0">Alltrada's sourcing activities follow a structured procurement framework defined by specific product categories, clearly established exclusion criteria, and standardized operational conditions.</p>
     <div class="mb-16">
      <h3 class="text-2xl font-medium text-gray-900 mb-8">Product Focus Areas</h3>
      <p class="text-gray-800 text-lg mb-6">We source branded consumer goods in the following categories:</p>
      <div class="grid md:grid-cols-2 gap-6 mb-6 justify-center">
       <div class="p-6 card-base card-content-spacing text-center md:text-left">
        <p class="text-gray-900 font-semibold text-base">Consumer Electronics</p>
-       <p class="text-gray-600 text-base mt-1 font-normal">Small electronics, household devices, accessories</p>
+       <p class="text-gray-600 muted-text text-base mt-1">Small electronics, household devices, accessories</p>
       </div>
       <div class="p-6 card-base card-content-spacing text-center md:text-left">
        <p class="text-gray-900 font-medium text-base">Household &amp; Home</p>
@@ -328,19 +349,24 @@
      <h3 class="text-2xl font-medium text-gray-900 mb-6">Exclusion Criteria</h3>
      <p class="text-gray-800 text-lg mb-6">To maintain quality and compliance standards, we do <strong>not</strong> purchase:</p>
      <div class="space-y-3">
-      <div class="flex items-center gap-3 text-gray-700 text-base"><span style="color: #2B2B2B; font-size: 16px; font-weight: 400; line-height: 1.7;">×</span>
+      <div class="flex items-center gap-3 text-gray-700 text-base">
+       <span style="color: #2B2B2B; font-size: 16px; font-weight: 400; line-height: 1.7;">×</span>
        <p>Used, refurbished, or returned goods</p>
       </div>
-      <div class="flex items-center gap-3 text-gray-700 text-base"><span style="color: #2B2B2B; font-size: 16px; font-weight: 400; line-height: 1.7;">×</span>
+      <div class="flex items-center gap-3 text-gray-700 text-base">
+       <span style="color: #2B2B2B; font-size: 16px; font-weight: 400; line-height: 1.7;">×</span>
        <p>Products from unverified or grey market sources</p>
       </div>
-      <div class="flex items-center gap-3 text-gray-700 text-base"><span style="color: #2B2B2B; font-size: 16px; font-weight: 400; line-height: 1.7;">×</span>
+      <div class="flex items-center gap-3 text-gray-700 text-base">
+       <span style="color: #2B2B2B; font-size: 16px; font-weight: 400; line-height: 1.7;">×</span>
        <p>Counterfeit or unauthorized parallel imports</p>
       </div>
-      <div class="flex items-center gap-3 text-gray-700 text-base"><span style="color: #2B2B2B; font-size: 16px; font-weight: 400; line-height: 1.7;">×</span>
+      <div class="flex items-center gap-3 text-gray-700 text-base">
+       <span style="color: #2B2B2B; font-size: 16px; font-weight: 400; line-height: 1.7;">×</span>
        <p>Damaged packaging or expired products</p>
       </div>
-      <div class="flex items-center gap-3 text-gray-700 text-base"><span style="color: #2B2B2B; font-size: 16px; font-weight: 400; line-height: 1.7;">×</span>
+      <div class="flex items-center gap-3 text-gray-700 text-base">
+       <span style="color: #2B2B2B; font-size: 16px; font-weight: 400; line-height: 1.7;">×</span>
        <p>Unbranded or white-label items without proper documentation</p>
       </div>
      </div>
@@ -377,7 +403,7 @@
   <section id="supplier-section" class="section-view">
    <div class="main-container content-width text-center md:text-left">
     <h2 id="supplier-heading" class="text-3xl md:text-4xl font-medium text-gray-900 mb-4 tracking-tight">Supplier Information</h2><span class="section-heading-accent"></span>
-    <p id="supplier-intro" class="text-gray-800 text-lg leading-relaxed mb-16 max-w-4xl">Supplier onboarding at Alltrada is governed by a verification framework comprising eligibility standards, documentation obligations, and product authorization criteria.</p>
+    <p id="supplier-intro" class="text-gray-800 text-lg leading-relaxed mb-16 max-w-4xl mx-auto md:mx-0">Supplier onboarding at Alltrada is governed by a verification framework comprising eligibility standards, documentation obligations, and product authorization criteria.</p>
     <div class="mb-12">
      <h3 class="text-2xl font-medium text-gray-900 mb-8">Onboarding Process</h3>
      <div class="grid md:grid-cols-4 gap-6 relative justify-center">
@@ -416,16 +442,14 @@
      <h3 class="text-2xl font-medium text-gray-900 mb-6">Supplier Inquiries</h3>
      <div class="grid md:grid-cols-2 gap-6 mb-8 justify-center">
       <div class="flex flex-col md:flex-row md:items-center md:gap-3 items-center gap-3">
-       <svg class="w-6 h-6 text-gray-700" viewbox="0 0 20 20" fill="currentColor">
-        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" /> <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+       <svg class="w-6 h-6 text-gray-700" viewbox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" /> <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
        </svg>
        <div class="text-center md:text-left">
         <p class="text-gray-600 text-base">Email</p><a id="supplier-cta-email" href="mailto:purchasing@alltrada.com" class="text-gray-900 text-lg hover:text-gray-700">purchasing@alltrada.com</a>
        </div>
       </div>
       <div class="flex flex-col md:flex-row md:items-center md:gap-3 items-center gap-3">
-       <svg class="w-6 h-6 text-gray-700" viewbox="0 0 20 20" fill="currentColor">
-        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+       <svg class="w-6 h-6 text-gray-700" viewbox="0 0 20 20" fill="currentColor"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
        </svg>
        <div class="text-center md:text-left">
         <p class="text-gray-600 text-sm">Phone</p><a id="supplier-cta-phone" href="tel:+491741518634" class="text-gray-900 text-base hover:text-gray-700">+49 174 1518634</a>
@@ -467,7 +491,7 @@
   <section id="privacy-section" class="section-view">
    <div class="main-container content-width text-center md:text-left">
     <h2 id="privacy-heading" class="text-3xl md:text-4xl font-medium text-gray-900 mb-8 tracking-tight">Privacy Notice</h2>
-    <div class="max-w-4xl space-y-8">
+    <div class="max-w-4xl mx-auto md:mx-0 space-y-8 text-center md:text-left">
      <div>
       <h3 class="text-lg font-medium text-gray-900 mb-4">1. Data Controller</h3>
       <div class="text-gray-700 leading-relaxed space-y-1 pl-4 border-l-2 border-gray-300 text-base">
@@ -587,7 +611,7 @@
   <section id="terms-section" class="section-view">
    <div class="main-container content-width text-center md:text-left">
     <h2 id="terms-heading" class="text-3xl md:text-4xl font-medium text-gray-900 mb-8 tracking-tight">Terms of Use</h2>
-    <div class="max-w-4xl space-y-10">
+    <div class="max-w-4xl mx-auto md:mx-0 space-y-10">
      <div>
       <h3 class="text-lg font-medium text-gray-900 mb-3">Overview</h3>
       <p class="text-gray-700 leading-relaxed text-base">These Terms of Use govern the access to and use of this website operated under the trading brand Alltrada, a business reference and sourcing platform operated by Drechsler Trading &amp; Commerce.</p>
@@ -671,12 +695,10 @@
    <div class="main-container content-width text-center md:text-left">
     <h2 id="contact-heading" class="text-3xl md:text-4xl font-medium text-gray-900 mb-4 tracking-tight">Contact</h2><span class="section-heading-accent"></span>
     <div class="mt-12">
-     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
-      <!-- Address -->
+     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center"><!-- Address -->
       <div class="p-6 card-base card-content-spacing text-center md:text-left">
        <div class="flex flex-col md:flex-row md:items-start md:gap-4 items-center gap-4">
-        <svg class="w-6 h-6 text-gray-700 mt-0 md:mt-1 flex-shrink-0" viewbox="0 0 20 20" fill="currentColor">
-         <path fill-rule="evenodd" d="M5.05 2.636A7 7 0 0116.364 13.95l-5.657 5.657a1 1 0 01-1.414 0L3.636 13.95A7 7 0 015.05 2.636zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+        <svg class="w-6 h-6 text-gray-700 mt-0 md:mt-1 flex-shrink-0" viewbox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.05 2.636A7 7 0 0116.364 13.95l-5.657 5.657a1 1 0 01-1.414 0L3.636 13.95A7 7 0 015.05 2.636zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
         </svg>
         <div>
          <p class="text-gray-600 text-sm font-medium mb-2">Address</p>
@@ -689,8 +711,7 @@
       </div><!-- Email -->
       <div class="p-6 card-base card-content-spacing text-center md:text-left">
        <div class="flex flex-col md:flex-row md:items-start md:gap-4 items-center gap-4">
-        <svg class="w-6 h-6 text-gray-700 mt-0 md:mt-1 flex-shrink-0" viewbox="0 0 20 20" fill="currentColor">
-         <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" /> <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+        <svg class="w-6 h-6 text-gray-700 mt-0 md:mt-1 flex-shrink-0" viewbox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" /> <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
         </svg>
         <div class="min-w-0">
          <p class="text-gray-600 text-sm font-medium">Email</p><a id="contact-email" href="mailto:contact@alltrada.com" class="text-gray-900 hover:text-gray-700 text-base break-words">contact@alltrada.com</a>
@@ -700,8 +721,7 @@
       </div><!-- Phone -->
       <div class="p-6 card-base card-content-spacing text-center md:text-left">
        <div class="flex flex-col md:flex-row md:items-start md:gap-4 items-center gap-4">
-        <svg class="w-6 h-6 text-gray-700 mt-0 md:mt-1 flex-shrink-0" viewbox="0 0 20 20" fill="currentColor">
-         <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+        <svg class="w-6 h-6 text-gray-700 mt-0 md:mt-1 flex-shrink-0" viewbox="0 0 20 20" fill="currentColor"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
         </svg>
         <div class="min-w-0">
          <p class="text-gray-600 text-sm font-medium">Phone</p><a id="contact-phone" href="tel:+491741518634" class="text-gray-900 hover:text-gray-700 text-base">+49 174 1518634</a>
@@ -714,9 +734,9 @@
    </div>
   </section>
   <section id="legal-section" class="section-view">
-   <div class="main-container content-width">
+   <div class="main-container content-width text-center md:text-left">
     <h2 id="legal-heading" class="text-3xl md:text-4xl font-medium text-gray-900 mb-12 tracking-tight">Legal Notice</h2>
-    <div class="max-w-4xl space-y-16">
+    <div class="max-w-4xl mx-auto md:mx-0 space-y-16">
      <div>
       <div class="text-gray-800 text-base">
        <p id="legal-company" class="font-semibold text-gray-900 text-base">Drechsler Trading &amp; Commerce</p>
@@ -917,5 +937,5 @@
       });
     });
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9d0f004690e3e529',t:'MTc3MTYwMDk2My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9d0fe69a041ee529',t:'MTc3MTYxMDM5OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
